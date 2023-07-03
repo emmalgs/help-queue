@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createStore } from 'redux';
-import reducer from './reducers/ticket-list-reducer';
+import rootReducer from './reducers/index';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './components/App';
 
-const store = createStore(reducer);
+
+const store = createStore(rootReducer);
 
 store.subscribe(() =>
   console.log(store.getState())
